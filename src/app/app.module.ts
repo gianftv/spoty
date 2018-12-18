@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule} from '@angular/common/http';
 
 import { ROUTES } from './app.routes';
+import { SpotifyService } from './services/spotify.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ROUTES } from './app.routes';
     RouterModule.forRoot(ROUTES, {useHash:true}),
     HttpClientModule
   ],
-  providers: [],
+  providers: [SpotifyService],//se detallan los components del servicio
   bootstrap: [AppComponent]
 })
 export class AppModule { }
