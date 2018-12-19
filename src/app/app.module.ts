@@ -11,6 +11,7 @@ import { ROUTES } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 //import { SpotifyService } from './services/spotify.service';
 
 @NgModule({//todos los componentes que creemos se registran aquí
@@ -21,13 +22,16 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
+    DomseguroPipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    
   ], 
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, {useHash:true}),
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES, {useHash:true})
+    
   ],
   providers: [],//SpotifyService. Se detallan los components del servicio
   bootstrap: [AppComponent]

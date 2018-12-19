@@ -20,7 +20,7 @@ export class TarjetasComponent {
     if (item.type === 'artist') {
       artistaId = item.id;
     } else {
-      artistaId = item.artist[0].id;
+      artistaId = item.artists[0].id;
 
     }
 
