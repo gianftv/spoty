@@ -12,16 +12,21 @@ export class HomeComponent  {
 
 
   nuevasCanciones : any []=[];
+
+  loading: boolean;
+
+
   //constructor( private http: HttpClient ) 
   constructor(private spotify: SpotifyService) { 
 
-
-    //loading
+  this.loading = true;
+    
 
     this.spotify.getNewRealeses()
         .subscribe ((data: any) => {
           console.log(data);
           this.nuevasCanciones = data;
+          this.loading = false;
 
 
         });

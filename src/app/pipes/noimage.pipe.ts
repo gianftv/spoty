@@ -8,7 +8,10 @@ export class NoimagePipe implements PipeTransform {
 
   transform(images: any, []): String {
 
-   
+   if(!images){
+
+    return 'assets/img/mia.png';
+   }
     if (images.length > 0 ){//
 
       return images[0].url;

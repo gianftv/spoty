@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ROUTES } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 //import { SpotifyService } from './services/spotify.service';
 
 @NgModule({//todos los componentes que creemos se registran aquí
@@ -18,7 +20,9 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    TarjetasComponent,
+    LoadingComponent
   ], 
   imports: [
     BrowserModule,
